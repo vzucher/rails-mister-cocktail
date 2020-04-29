@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-between" id="navbar">
+  <h1>Cocktails :)</h1>
+  <a><%= link_to 'Add new cocktail', new_cocktail_path(@cocktail) %></a>
+</div>
+
+<div class="container d-flex flex-row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="container" id="card">
+      <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+    </div>
+  <% end %>
+</div>
